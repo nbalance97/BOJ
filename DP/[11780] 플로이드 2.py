@@ -1,0 +1,55 @@
+import sys
+from collections import deque
+
+INT_MAX = sys.maxsize
+
+input = sys.stdin.readline
+n = int(input().rstrip())
+m = int(input().rstrip())
+
+dp = [[INT_MAX] * (n+1) for _ in range(n+1)]
+parent = [[i for i in range(n+1)] for _ in range(n+1)]
+
+for _ in range(m):
+    s, e, cost = map(int, input().rstrip().split())
+    if dp[s][e] > cost:
+        dp[s][e] = cost
+
+for i in range(1, n+1):
+    dp[i][i] = 0
+
+for k in range(1, n+1):
+    for i in range(1, n+1):
+        for j in range(1, n+1):
+            if dp[i][j] > dp[i][k] + dp[k][j]:
+                parent[i][j] = k
+                dp[i][j] = dp[i][k] + dp[k][j]
+
+for i in range(1, n+1):
+    for j in range(1, n+1):
+        print(dp[i][j], end=" ")
+    print()
+
+def find_path(start, end):
+    p = parent[start][end]
+    if p == end:
+        return []
+    else:
+        return find_path(start, p) + [p] + find_path(p, end)
+
+for i in range(1, n+1):
+    for j in range(1, n+1):
+        if dp[i][j] == 0 or dp[i][j] >= INT_MAX:
+            print(0)
+        else:
+            seq = find_path(i, j)
+            seq = [i] + seq + [j]
+
+            # answer print
+            print(len(seq), end=" ")
+            for s in seq:
+                print(s, end=" ")
+            print()
+
+
+
