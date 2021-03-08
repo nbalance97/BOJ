@@ -13,6 +13,8 @@ Baekjoon Algorithm(acmicpc.net)
 - search
 - string
 -------------------------------------
+<h1>String Part</h1>
+
 KMP Algorithm
 
 ![image](https://user-images.githubusercontent.com/76891875/110342731-15c6b000-806f-11eb-9bec-ceb0e1ab5618.png)
