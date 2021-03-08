@@ -1,5 +1,12 @@
 import sys
 
+'''
+KMP 알고리즘을 활용한 문자열 찾기
+
+KMP 알고리즘은 문자열을 찾을 때, 매칭이 실패한 경우 그냥 끝내는 것이 아닌 찾은 앞의 정보를 이용하여 시간을 줄임.
+KMP 알고리즘의 핵심은 Table을 미리 만들어 두고, 문자열이 일치하지 않으면 어디로 이동해야 하는지 미리 기록하여 두는 것이라고 생각함.
+'''
+
 # 공백이 있는 문자열 처리를 위해 rstrip 대신 replace 사용
 T = sys.stdin.readline().replace("\n", "")
 P = sys.stdin.readline().replace("\n", "")
