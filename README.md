@@ -24,7 +24,7 @@ KMP Algorithm
 <b> 동작 과정 </b> 
 ![image](https://user-images.githubusercontent.com/76891875/110346019-802d1f80-8072-11eb-9ee1-0dc14df9d155.png)
 
-<b> 실패 함수 구하는 예시 </b>
+<b> 실패 함수 구하는 예시 </b> <br>
 ![image](https://user-images.githubusercontent.com/76891875/110342731-15c6b000-806f-11eb-9bec-ceb0e1ab5618.png)
 
 출처 : https://bowbowbow.tistory.com/6
