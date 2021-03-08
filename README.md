@@ -24,6 +24,6 @@ KMP Algorithm
 - 이를 이용해서 한 시점에서 문자열 비교가 틀린 경우, 비교를 다시 어디서부터 시작할 지 구할 수 있음.
 - 실패 함수 구하는 알고리즘도 KMP 알고리즘 사용
 
-동작 과정 <br>
+<h2> 동작 과정 </h2> 
 ![image](https://user-images.githubusercontent.com/76891875/110346019-802d1f80-8072-11eb-9ee1-0dc14df9d155.png)
 
