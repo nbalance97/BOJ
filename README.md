@@ -21,10 +21,12 @@ KMP Algorithm
 - 핵심은 이전 단계까지 비교했던 것을 재사용한다는 점
 - 실패 함수 구하는 알고리즘도 KMP 알고리즘 사용
 
-<b> 동작 과정 </b> 
+<b> 동작 과정 </b>
+<hr>
 ![image](https://user-images.githubusercontent.com/76891875/110346019-802d1f80-8072-11eb-9ee1-0dc14df9d155.png)
 
 <b> 실패 함수 구하는 예시 </b> <br>
+<hr>
 ![image](https://user-images.githubusercontent.com/76891875/110342731-15c6b000-806f-11eb-9bec-ceb0e1ab5618.png)
 
 출처 : https://bowbowbow.tistory.com/6
