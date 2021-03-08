@@ -1,4 +1,4 @@
-# Algorithm
+<h1>Algorithm</h1>
 
 Baekjoon Algorithm Solution in Python
 
