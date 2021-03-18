@@ -9,6 +9,7 @@ def bfs(current):
     
     visited = [False] * (F+1)
     queue = deque()
+    # 현재 층 방문처리 및 queue에 삽입
     visited[current] = True
     queue.append([current, 0])        
 
@@ -16,9 +17,12 @@ def bfs(current):
         stair, count = queue.popleft()
         if stair == G:
             return count
+        # 위층으로 방문한적이 없고, 이동 가능한 경우 방문처리 하고 queue에 넣음
         if stair + U <= F and not visited[stair + U]:
             visited[stair + U] = True
             queue.append([stair + U, count+1])
+            
+        # 아래층으로 방문한적이 없고, 이동 가능한 경우 방문처리 하고 queue에 넣음
         if stair - D > 0 and not visited[stair - D]:
             visited[stair - D] = True
             queue.append([stair - D, count+1])
