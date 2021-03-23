@@ -23,8 +23,9 @@ for i in range(p-1, 0, -1):
                 break
         else:
             break
-
-    queue.appendleft([L[i], i])
+            
+    # 현재 탑을 스택에 저장
+    queue.appendleft([L[i], i]) 
 
 print(" ".join(map(str, answer[1:])))
             
