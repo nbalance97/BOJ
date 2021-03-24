@@ -22,7 +22,7 @@ def getPassword(pattern):
         if p == "<":
             if len(left) != 0:
                 right.appendleft(left.pop())
-        elif p == ">":
+        elif p == ">":ㄹㄹ
             if len(right) != 0:
                 left.append(right.popleft())
         elif p == "-":
