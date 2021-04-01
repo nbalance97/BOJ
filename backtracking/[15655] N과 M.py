@@ -7,7 +7,7 @@ N, M = map(int, input().rstrip().split())
 num = list(map(int, input().rstrip().split()))
 num.sort()
 
-com = combinations(num, M)
+com = combinations(num, M) # 조합
 
 for t in com:
     for q in t:
