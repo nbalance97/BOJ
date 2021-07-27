@@ -2,6 +2,10 @@ import sys
 
 input = sys.stdin.readline
 n = int(input().rstrip())
+if n == 1:
+    print(1)
+    sys.exit(0)
+
 dp = [0] * (n+1)
 dp[1] = 1
 dp[2] = 3
