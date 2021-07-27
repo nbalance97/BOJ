@@ -1,15 +1,17 @@
 import sys
+n, m = map(int, sys.stdin.readline().rstrip().split())
+numbers = list(map(int,sys.stdin.readline().rstrip().split()))
 
-input = sys.stdin.readline
-n = int(input().rstrip())
-if n == 1:
-    print(1)
-    sys.exit(0)
+dp = [numbers[0]] + [0] * (n-1)
 
-dp = [0] * (n+1)
-dp[1] = 1
-dp[2] = 3
-for i in range(3, n+1):
-    dp[i] = dp[i-1] + (dp[i-2] * 2)
+for i in range(1, n):
+    dp[i] = dp[i-1] + numbers[i]
 
-print(dp[n] % 10007)
+for i in range(m):
+    src, dest = map(int, sys.stdin.readline().rstrip().split())
+    src = src - 1
+    dest = dest - 1
+    if src == 0:
+        print(dp[dest])
+    else:
+        print(dp[dest]-dp[src-1])
