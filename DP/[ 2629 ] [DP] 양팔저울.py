@@ -11,8 +11,6 @@ marbles = list(map(int, input().rstrip().split()))
 dp = [False] * 40001
 dp[0] = True
 
-weights.reverse() # 역순으로 전환
-
 for weight in weights:
     canmake = set()
     for i in range(40001):
