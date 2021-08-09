@@ -1,0 +1,19 @@
+import sys
+
+n = int(sys.stdin.readline())
+
+left = 1
+right = 1
+sumation = 1
+answer = 0
+while(left <= right):
+    if sumation == n:
+        answer += 1
+    if sumation < n:
+        right += 1
+        sumation += right
+    elif sumation >= n:
+        sumation -= left
+        left += 1
+
+print(answer)
